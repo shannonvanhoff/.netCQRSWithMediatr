@@ -20,8 +20,9 @@ namespace Cleanarchiwithmediator.application.Blogs.Query.Getblog
         public async Task<List<Blogdto>> Handle(Blogquery request, CancellationToken cancellationToken)
         {
            var blogs = await _Iblog.GetBlogs();
+            var bloglist= blogs.Select(x => new Blogdto { Author=x.author, Description=x.Description, Id=x.Id, Name=x.Name}).ToList();
 
-            
+            return bloglist;
         }
     }
 }
