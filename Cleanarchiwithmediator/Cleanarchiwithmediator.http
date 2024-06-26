@@ -1,0 +1,6 @@
+@Cleanarchiwithmediator_HostAddress = http://localhost:5068
+
+GET {{Cleanarchiwithmediator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
